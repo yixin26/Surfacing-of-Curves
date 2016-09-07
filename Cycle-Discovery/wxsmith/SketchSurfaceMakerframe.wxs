@@ -1,0 +1,674 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="SketchSurfaceMakerFrame">
+		<title>SketchSurfaceMaker</title>
+		<pos>50,0</pos>
+		<size>1200,1100</size>
+		<fg>#000000</fg>
+		<bg>#FFFFFF</bg>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_FRAME_STYLE|wxWANTS_CHARS</style>
+		<handler function="OnKeyDown" entry="EVT_KEY_DOWN" />
+		<handler function="OnResize" entry="EVT_SIZE" />
+		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+			<cols>1</cols>
+			<rows>3</rows>
+			<growablecols>1</growablecols>
+			<growablerows>2</growablerows>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
+					<cols>3</cols>
+					<object class="sizeritem">
+						<object class="wxFlexGridSizer" variable="FlexGridSizer7" member="no">
+							<cols>3</cols>
+							<object class="spacer">
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<option>1</option>
+								<size>39,33</size>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_LEFT|wxALIGN_BOTTOM</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxFlexGridSizer" variable="FlexGridSizer6" member="no">
+							<cols>3</cols>
+						</object>
+						<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_BOTTOM</flag>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer3" member="no">
+					<cols>4</cols>
+					<rows>1</rows>
+					<growablecols>2</growablecols>
+					<growablerows>1</growablerows>
+					<object class="sizeritem">
+						<object class="wxFlexGridSizer" variable="FlexGridSizer14" member="no">
+							<cols>3</cols>
+							<object class="spacer">
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+								<size>20,20</size>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxFlexGridSizer" variable="FlexGridSizer8" member="no">
+							<cols>1</cols>
+							<object class="sizeritem">
+								<object class="wxFlexGridSizer" variable="FlexGridSizer11" member="no">
+									<cols>3</cols>
+									<object class="sizeritem">
+										<object class="wxButton" name="ID_BUTTONLOADFILE" variable="loadFile" member="yes">
+											<label>&amp;Load</label>
+											<size>55,24</size>
+											<tooltip>press Ctrl + L</tooltip>
+											<help>press Ctrl + L</help>
+											<style>wxNO_BORDER</style>
+											<handler function="OnOpenCurveFile" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+										<option>1</option>
+									</object>
+									<object class="spacer">
+										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<option>1</option>
+										<size>7,20</size>
+									</object>
+									<object class="sizeritem">
+										<object class="wxButton" name="ID_BUTTONSAVEFILE" variable="saveFile" member="yes">
+											<label>&amp;Save</label>
+											<size>55,24</size>
+											<enabled>0</enabled>
+											<tooltip>press Ctrl + S</tooltip>
+											<help>press Ctrl + S</help>
+											<handler function="OnSaveAll" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxALL|wxALIGN_BOTTOM|wxALIGN_CENTER_HORIZONTAL</flag>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxStaticLine" name="ID_STATICLINE2" variable="StaticLine2" member="yes">
+									<size>130,2</size>
+								</object>
+								<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxFlexGridSizer" variable="FlexGridSizer10" member="no">
+									<cols>1</cols>
+									<object class="sizeritem">
+										<object class="wxButton" name="ID_CYCLECONSTRAINT" variable="cycleConstraint" member="yes">
+											<label>&amp;Constraint</label>
+											<size>100,24</size>
+											<enabled>0</enabled>
+											<tooltip>press Ctrl + C</tooltip>
+											<help>press Ctrl + C</help>
+											<handler function="OnCycleConstraintClick" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>12d</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxButton" name="ID_BUTTONCAPACITY" variable="capacityBtn" member="yes">
+											<label>C&amp;Apacity</label>
+											<size>100,24</size>
+											<enabled>0</enabled>
+											<tooltip>press Ctrl + A</tooltip>
+											<help>press Ctrl + A</help>
+											<handler function="OnCapacityBtnClick" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>1</border>
+										<option>1</option>
+									</object>
+									<object class="spacer">
+										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<option>1</option>
+										<size>0,4</size>
+									</object>
+									<object class="sizeritem">
+										<object class="wxButton" name="ID_BUTTONPARAMETERS" variable="parameters" member="yes">
+											<label>&amp;Parameters</label>
+											<size>100,24</size>
+											<enabled>0</enabled>
+											<tooltip>press Ctrl + P</tooltip>
+											<help>press Ctrl + P</help>
+											<handler function="OnParametersClick" entry="EVT_BUTTON" />
+										</object>
+										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+										<border>4d</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxStaticLine" name="ID_STATICLINE1" variable="StaticLine1" member="yes">
+											<size>130,2</size>
+										</object>
+										<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxFlexGridSizer" variable="FlexGridSizer15" member="no">
+									<cols>1</cols>
+									<object class="sizeritem">
+										<object class="wxFlexGridSizer" variable="FlexGridSizer17" member="no">
+											<cols>1</cols>
+											<object class="sizeritem">
+												<object class="wxCheckBox" name="ID_SHOWCURVENETWORK" variable="showCurveNetwork" member="yes">
+													<label>&amp;Arcs</label>
+													<checked>1</checked>
+													<size>90,14</size>
+													<enabled>0</enabled>
+													<tooltip>press A</tooltip>
+													<help>press A</help>
+													<handler function="OnShowCurveNetworkClick" entry="EVT_CHECKBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxRadioBox" name="ID_RADIOBOXCURVEMODE" variable="showCurveMode" member="yes">
+													<label></label>
+													<content>
+														<item>Solid</item>
+														<item>Dashed</item>
+													</content>
+													<default>-1</default>
+													<size>120,64</size>
+													<enabled>0</enabled>
+													<tooltip>press shift+A</tooltip>
+													<help>press shift+A</help>
+													<handler function="OnShowCurveModeSelect" entry="EVT_RADIOBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxFlexGridSizer" variable="FlexGridSizer12" member="no">
+													<cols>2</cols>
+													<object class="sizeritem">
+														<object class="wxStaticText" name="ID_STATICTEXT2" variable="curveLineSizeTex" member="yes">
+															<label>Line Size</label>
+															<size>60,14</size>
+															<enabled>0</enabled>
+														</object>
+														<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+														<option>1</option>
+													</object>
+													<object class="sizeritem">
+														<object class="wxSpinButton" name="ID_CURVELINESIZE" variable="curveLineSize" member="yes">
+															<value>1</value>
+															<min>1</min>
+															<max>10</max>
+															<size>57,16</size>
+															<enabled>0</enabled>
+															<tooltip>press Left/Right or 1/2</tooltip>
+															<help>press Left/Right or 1/2</help>
+															<style>wxSP_HORIZONTAL|wxSP_ARROW_KEYS</style>
+															<handler function="OncurveLineSizeChange" entry="EVT_SPIN" />
+														</object>
+														<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxCheckBox" name="ID_SHOWCAPACITY" variable="showCapacity" member="yes">
+													<label>Show Capacity</label>
+													<size>91,13</size>
+													<enabled>0</enabled>
+													<handler function="OnshowCapacityClick" entry="EVT_CHECKBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxCheckBox" name="ID_SHOWCONSTRAINT" variable="showConstraint" member="yes">
+													<label>Show Constraint</label>
+													<size>98,13</size>
+													<enabled>0</enabled>
+													<handler function="OnshowConstraintClick" entry="EVT_CHECKBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxFlexGridSizer" variable="FlexGridSizer18" member="no">
+											<cols>1</cols>
+											<object class="sizeritem">
+												<object class="wxCheckBox" name="ID_SHOWCYCLES" variable="showCycles" member="yes">
+													<label>&amp;Cycles</label>
+													<checked>1</checked>
+													<size>114,14</size>
+													<enabled>0</enabled>
+													<tooltip>press C</tooltip>
+													<help>press C</help>
+													<handler function="OnShowCyclesClick" entry="EVT_CHECKBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxRadioBox" name="ID_RADIOBOXCYCLEMODE" variable="showCycleMode" member="yes">
+													<label></label>
+													<content>
+														<item>Random color</item>
+														<item>Color by cost</item>
+													</content>
+													<default>-1</default>
+													<size>120,63</size>
+													<enabled>0</enabled>
+													<tooltip>press shift+C</tooltip>
+													<help>press shift+C</help>
+													<handler function="OnShowCycleModeSelect" entry="EVT_RADIOBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxFlexGridSizer" variable="FlexGridSizer16" member="no">
+													<cols>2</cols>
+													<object class="sizeritem">
+														<object class="wxStaticText" name="ID_STATICTEXTCYCLESIZE" variable="cycleSizeText" member="yes">
+															<label>Cycles Size</label>
+															<size>60,14</size>
+															<enabled>0</enabled>
+														</object>
+														<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+														<option>1</option>
+													</object>
+													<object class="sizeritem">
+														<object class="wxSpinButton" name="ID_SHOWCYCLESIZE" variable="showCycleSize" member="yes">
+															<value>9</value>
+															<min>1</min>
+															<max>10</max>
+															<size>57,16</size>
+															<enabled>0</enabled>
+															<tooltip>press Left/Right or 1/2</tooltip>
+															<help>press Left/Right or 1/2</help>
+															<style>wxSP_HORIZONTAL|wxSP_ARROW_KEYS</style>
+															<handler function="OnShowCycleSizeChange" entry="EVT_SPIN" />
+														</object>
+														<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxFlexGridSizer" variable="FlexGridSizer20" member="no">
+													<cols>2</cols>
+													<object class="sizeritem">
+														<object class="wxStaticText" name="ID_STATICTEXT1" variable="lineSizeText" member="yes">
+															<label>Line Size</label>
+															<size>60,14</size>
+															<enabled>0</enabled>
+														</object>
+														<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+														<option>1</option>
+													</object>
+													<object class="sizeritem">
+														<object class="wxSpinButton" name="ID_LINESIZE" variable="lineSize" member="yes">
+															<value>2</value>
+															<min>1</min>
+															<max>10</max>
+															<size>57,16</size>
+															<enabled>0</enabled>
+															<tooltip>prese Up/Down or 3/4</tooltip>
+															<help>prese Up/Down or 3/4</help>
+															<style>wxSP_HORIZONTAL|wxSP_ARROW_KEYS</style>
+															<handler function="OnlineSizeChange" entry="EVT_SPIN" />
+														</object>
+														<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxButton" name="ID_CYCLERANDOMCOLOR" variable="cycleRandomColor" member="yes">
+													<label>Random Color</label>
+													<size>117,20</size>
+													<enabled>0</enabled>
+													<handler function="OnCycleRandomColorClick" entry="EVT_BUTTON" />
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxCheckBox" name="ID_SHOWSINGLECYCLE" variable="showSingleCycle" member="yes">
+													<label>Si&amp;ngle Cycle</label>
+													<size>103,14</size>
+													<enabled>0</enabled>
+													<tooltip>press V</tooltip>
+													<help>press V</help>
+													<handler function="OnShowSingleCycleSelect" entry="EVT_CHECKBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticBoxSizer" variable="StaticBoxSizer1" member="no">
+													<label>Cycle subdivision</label>
+													<orient>wxVERTICAL</orient>
+													<object class="sizeritem">
+														<object class="wxFlexGridSizer" variable="FlexGridSizer22" member="no">
+															<cols>1</cols>
+															<object class="sizeritem">
+																<object class="wxCheckBox" name="ID_CHECKBOX1" variable="showNewCycles" member="yes">
+																	<label>Show new cycles</label>
+																	<handler function="OnShowNewCyclesClick" entry="EVT_CHECKBOX" />
+																</object>
+																<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+																<option>1</option>
+															</object>
+															<object class="sizeritem">
+																<object class="wxFlexGridSizer" variable="FlexGridSizer23" member="no">
+																	<cols>3</cols>
+																	<object class="sizeritem">
+																		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText1" member="yes">
+																			<label>Thres:</label>
+																		</object>
+																		<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="cycleSubdivideParam_Curvature" member="yes">
+																			<value>0.1</value>
+																			<size>35,21</size>
+																		</object>
+																		<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<option>1</option>
+																	</object>
+																	<object class="sizeritem">
+																		<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+																			<label>Do</label>
+																			<size>38,23</size>
+																			<handler function="OnSubdivideCycles" entry="EVT_BUTTON" />
+																		</object>
+																		<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																		<option>1</option>
+																	</object>
+																</object>
+																<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+																<option>1</option>
+															</object>
+														</object>
+														<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+														<option>1</option>
+													</object>
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxFlexGridSizer" variable="FlexGridSizer19" member="no">
+											<cols>1</cols>
+											<object class="sizeritem">
+												<object class="wxCheckBox" name="ID_SHOWSURFACE" variable="showSurface" member="yes">
+													<label>&amp;Surfaces</label>
+													<size>103,14</size>
+													<enabled>0</enabled>
+													<tooltip>press S</tooltip>
+													<help>press S</help>
+													<handler function="OnShowSurfaceClick" entry="EVT_CHECKBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxRadioBox" name="ID_SURFACEMODE" variable="showSurfaceMode" member="yes">
+													<label></label>
+													<content>
+														<item>Wireframe</item>
+														<item>Solid</item>
+													</content>
+													<default>1</default>
+													<size>120,63</size>
+													<enabled>0</enabled>
+													<tooltip>press shift + S</tooltip>
+													<help>press shift + S</help>
+													<handler function="OnSurfaceModeSelect" entry="EVT_RADIOBOX" />
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxStaticLine" name="ID_STATICLINE3" variable="StaticLine3" member="yes">
+									<size>135,2</size>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_TOP|wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxFlexGridSizer" variable="FlexGridSizer9" member="no">
+							<cols>1</cols>
+							<rows>1</rows>
+							<growablecols>1</growablecols>
+							<growablerows>1</growablerows>
+							<object class="spacer">
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<option>1</option>
+								<size>0,15</size>
+							</object>
+							<object class="sizeritem">
+								<object class="wxGLCanvas" name="ID_GLCANVAS" subclass="SketchGLCanvas" variable="m_openGLView" member="yes">
+									<mDepthSize>16</mDepthSize>
+									<size>1000,700</size>
+									<style>wxSIMPLE_BORDER|wxWANTS_CHARS</style>
+									<handler function="OnGLViewKeyDown" entry="EVT_KEY_DOWN" />
+									<handler function="OnGLViewKeyUp" entry="EVT_KEY_UP" />
+									<handler function="OnGLViewLeftDClick" entry="EVT_LEFT_DCLICK" />
+									<handler function="OnGLViewMouseWheel" entry="EVT_MOUSEWHEEL" />
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_TOP|wxALIGN_CENTER_HORIZONTAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxFlexGridSizer" variable="FlexGridSizer5" member="no">
+							<cols>3</cols>
+							<object class="spacer">
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+								<size>34,20</size>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_TOP</flag>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer4" member="no">
+					<cols>3</cols>
+					<object class="sizeritem">
+						<object class="wxFlexGridSizer" variable="FlexGridSizer13" member="no">
+							<cols>3</cols>
+							<object class="spacer">
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+								<size>86,47</size>
+							</object>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxMenuBar" variable="mainMenu" member="yes">
+			<extra_code>SetMenuBar(NULL);</extra_code>
+			<object class="wxMenu" variable="Menu1" member="no">
+				<label>&amp;File</label>
+				<object class="wxMenu" name="ID_MENUITEM2" variable="Menu3" member="yes">
+					<label>Open</label>
+					<object class="wxMenuItem" name="idMenuCurveFile" variable="MenuItemOpenCurve" member="yes">
+						<label>Curve File</label>
+						<handler function="OnOpenCurveFile" entry="EVT_MENU" />
+					</object>
+				</object>
+				<object class="wxMenu" name="ID_MENUITEM3" variable="MenuItem4" member="yes">
+					<label>Save</label>
+					<object class="wxMenuItem" name="idMenuSaveModifiedFile" variable="MenuItemSaveModifiedFile" member="yes">
+						<label>New Curve</label>
+						<handler function="OnSaveNewCurve" entry="EVT_MENU" />
+					</object>
+					<object class="wxMenuItem" name="ID_MENUITEM6" variable="MenuItem9" member="yes">
+						<label>New Capacity</label>
+						<handler function="OnSaveCurveWithNewCapacity" entry="EVT_MENU" />
+					</object>
+					<object class="wxMenuItem" name="idMenuSaveParameters" variable="MenuItem6" member="no">
+						<label>Algorithm Parameters</label>
+						<handler function="OnSaveParameters" entry="EVT_MENU" />
+					</object>
+				</object>
+				<object class="wxMenuItem" name="idMenuQuit" variable="MenuItem1" member="no">
+					<label>Quit</label>
+					<accel>Alt-F4</accel>
+					<help>Quit the application</help>
+					<handler function="OnQuit" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="MenuItem7" member="yes">
+				<label>&amp;Reset</label>
+				<object class="wxMenuItem" name="idMenuResetVisualization" variable="MenuItemResetVisualization" member="yes">
+					<label>Reset Visualization</label>
+					<handler function="OnResetVisualization" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuResetAll" variable="MenuItemResetAll" member="yes">
+					<label>Reset ALL</label>
+					<handler function="OnResetAll" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="MenuItem5" member="yes">
+				<label>&amp;Compute</label>
+				<object class="wxMenu" name="ID_MENUITEM1" variable="MenuItem3" member="yes">
+					<label>Rotation Graph</label>
+					<object class="wxMenuItem" name="idMenuRandomRotationGraph" variable="MenuItemRandomRotationGraph" member="yes">
+						<label>Random Rotation Graph</label>
+						<handler function="OnMenuItemRandomRotationGraph" entry="EVT_MENU" />
+					</object>
+					<object class="wxMenuItem" name="idMenuRotationGraph" variable="MenuItemRotationGraph" member="yes">
+						<label>Angel</label>
+						<handler function="OnComputeRotationGraph" entry="EVT_MENU" />
+					</object>
+					<object class="wxMenuItem" name="idMenuRotationGraphExtended" variable="MenuItemRotationGraphExtended" member="yes">
+						<label>Angle + Dihedral</label>
+						<handler function="OnComputeRotationGraphExtended" entry="EVT_MENU" />
+					</object>
+					<object class="wxMenuItem" name="idMenuRotationGraphSuperGraph" variable="MenuItemRotationGraphSuperGraph" member="yes">
+						<label>Global Optimization</label>
+						<handler function="OnComputeRotationGraphSuperGraph" entry="EVT_MENU" />
+					</object>
+					<object class="wxMenuItem" name="idMenuRotationGraphSuperGraphEx" variable="MenuItemRotationGraphSuperGraphEx" member="yes">
+						<label>Almost Global Optimization</label>
+						<handler function="OnComputeRotationGraphSuperGraphEx" entry="EVT_MENU" />
+					</object>
+				</object>
+				<object class="wxMenuItem" name="idMenuCycleDiscovery" variable="MenuItemCycleDiscovery" member="yes">
+					<label>Cycle construction</label>
+					<handler function="OnComputeCycleSet" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuCycleBreaking" variable="MenuItemCycleBreaking" member="yes">
+					<label>Cycle Breaking</label>
+					<handler function="OnComputeCycleBreaking" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="idMenuTriangulation" variable="MenuItemTriangulation" member="yes">
+					<label>Triangulation</label>
+					<handler function="OnComputeTriangulation" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu2" member="no">
+				<label>Instruction</label>
+				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">
+					<label>Show Rotation Graph</label>
+					<handler function="OnAbout" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBARMAIN" variable="statusBarMain" member="yes">
+			<fields>4</fields>
+			<widths>-15,-15,-15,-50</widths>
+			<styles>wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL,wxSB_NORMAL</styles>
+			<style>wxSIMPLE_BORDER|wxDOUBLE_BORDER</style>
+		</object>
+	</object>
+</wxsmith>

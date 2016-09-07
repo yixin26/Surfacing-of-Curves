@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SketchSurfaceMaker" />
+		<Option pch_mode="2" />
+		<Option compiler="msvc8" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin\Debug\SketchSurfaceMaker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Debug\" />
+				<Option type="0" />
+				<Option compiler="msvc8" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="/MDd" />
+					<Add option="/Zi" />
+					<Add option='/Fp&quot;obj\Debug\SketchSurfaceMaker.pch&quot;' />
+					<Add option="/D_DEBUG" />
+					<Add option="/D__WXDEBUG__" />
+					<Add directory="$(#wx)\lib\vc_lib\mswd" />
+					<Add directory="$(#wx)\lib\vc_lib\msw" />
+					<Add directory="..\..\SDK\MWT_v5\inc" />
+					<Add directory="..\..\SDK\tetgen\tetgen1.4.3\inc" />
+					<Add directory="..\..\SDK\fflas-ffpack-1.3.3\include" />
+					<Add directory="..\..\SDK\armadillo-1.0.4\include" />
+					<Add directory="..\..\SDK\geodesicDistance" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)\lib\vc_lib\mswd" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="/DEBUG" />
+					<Add option="/NODEFAULTLIB:libcmtd.lib" />
+					<Add option="/NODEFAULTLIB:msvcrt.lib" />
+					<Add library="..\..\SDK\armadillo-1.0.4\examples\lib_win32\blas_win32_MT.lib" />
+					<Add library="..\..\SDK\armadillo-1.0.4\examples\lib_win32\lapack_win32_MT.lib" />
+					<Add library="..\..\SDK\geodesicDistance\Debug\geodesicDistance.lib" />
+					<Add library="..\..\SDK\MWT_v5\lib\debug\DrT.lib" />
+					<Add library="..\..\SDK\opengl\GLU32.LIB" />
+					<Add library="..\..\SDK\opengl\OPENGL32.LIB" />
+					<Add library="..\..\SDK\tetgen\tetgen1.4.3\lib\TetGen.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxexpatd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxjpegd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_core.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_gl.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxpngd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxregexd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxtiffd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxzlibd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_xml.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_odbc.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_xrc.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_adv.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_aui.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_dbgrid.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_html.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_media.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_qa.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_richtext.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_net.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_core.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_gl.lib" />
+					<Add directory="$(#wx)\lib\vc_lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='mt.exe /nologo /manifest &quot;bin\Debug\SketchSurfaceMaker.exe.manifest&quot; /outputresource:&quot;bin\Debug\SketchSurfaceMaker.exe&quot;;1' />
+				</ExtraCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin\Release\SketchSurfaceMaker" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj\Release\" />
+				<Option type="0" />
+				<Option compiler="msvc8" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/O2" />
+					<Add option="/Ox" />
+					<Add option='/Fp&quot;obj\Release\SketchSurfaceMaker.pch&quot;' />
+					<Add option="/Ob1" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DARMA_USE_LAPACK" />
+					<Add option="/DARMA_USE_BLAS" />
+					<Add directory="$(#wx)\lib\vc_lib\msw" />
+					<Add directory="..\..\SDK\MWT_v5\inc" />
+					<Add directory="..\..\SDK\tetgen\tetgen1.4.3\inc" />
+					<Add directory="..\..\SDK\fflas-ffpack-1.3.3\include" />
+					<Add directory="..\..\SDK\armadillo-1.0.4\include" />
+					<Add directory="..\..\SDK\geodesicDistance" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)\lib\vc_lib\msw" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="/NODEFAULTLIB:libcmt.lib" />
+					<Add library="msvcrt.lib" />
+					<Add library="wxmsw28_richtext.lib" />
+					<Add library="wxmsw28_xrc.lib" />
+					<Add library="wxmsw28_aui.lib" />
+					<Add library="wxmsw28_dbgrid.lib" />
+					<Add library="wxbase28_odbc.lib" />
+					<Add library="wxmsw28_media.lib" />
+					<Add library="wxbase28_net.lib" />
+					<Add library="wxmsw28_gl.lib" />
+					<Add library="wxmsw28_qa.lib" />
+					<Add library="wxbase28_xml.lib" />
+					<Add library="wxmsw28_adv.lib" />
+					<Add library="wxmsw28_html.lib" />
+					<Add library="wxmsw28_core.lib" />
+					<Add library="wxbase28.lib" />
+					<Add library="wxpng.lib" />
+					<Add library="wxjpeg.lib" />
+					<Add library="wxtiff.lib" />
+					<Add library="wxzlib.lib" />
+					<Add library="wxregex.lib" />
+					<Add library="wxexpat.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28_net.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28_odbc.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28_xml.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_net.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_odbc.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_xml.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28ud.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28ud_net.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28ud_xml.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxexpat.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxexpatd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxjpeg.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxjpegd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_adv.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_aui.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_core.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_dbgrid.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_gl.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_html.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_media.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_qa.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_richtext.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_xrc.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_adv.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_aui.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_core.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_dbgrid.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_gl.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_html.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_media.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_qa.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_richtext.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_xrc.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_adv.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_aui.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_core.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_html.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_qa.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_richtext.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_xrc.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxpng.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxpngd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxregex.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxregexd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxregexud.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxtiff.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxtiffd.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxzlib.lib" />
+					<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxzlibd.lib" />
+					<Add library="..\..\SDK\MWT_v5\lib\release\DrT.lib" />
+					<Add library="..\..\SDK\tetgen\tetgen1.4.3\Release\tetgen.lib" />
+					<Add library="..\..\SDK\armadillo-1.0.4\examples\lib_win32\blas_win32_MT.lib" />
+					<Add library="..\..\SDK\armadillo-1.0.4\examples\lib_win32\lapack_win32_MT.lib" />
+					<Add library="..\..\SDK\geodesicDistance\Release\geodesicDistance.lib" />
+					<Add directory="$(#wx)\lib\vc_lib" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='mt.exe /nologo /manifest &quot;bin\Release\SketchSurfaceMaker.exe.manifest&quot; /outputresource:&quot;bin\Release\SketchSurfaceMaker.exe&quot;;1' />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="/TP" />
+			<Add option="/Gd" />
+			<Add option="/GF" />
+			<Add option="/W3" />
+			<Add option="/Zc:wchar_t" />
+			<Add option="/EHsc" />
+			<Add option='/FI&quot;wx_pch.h&quot;' />
+			<Add option='/Yc&quot;wx_pch.h&quot;' />
+			<Add option="/DWIN32" />
+			<Add option="/D__WIN32__" />
+			<Add option="/D__WXMSW__" />
+			<Add option="/D_WINDOWS" />
+			<Add option="/D_CRT_SECURE_DEPRECATE" />
+			<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
+			<Add option="/D_VC80_UPGRADE=0x0600" />
+			<Add option="/DWX_PRECOMP" />
+			<Add option="/DARMA_USE_LAPACK" />
+			<Add option="/DARMA_USE_BLAS" />
+			<Add directory="$(#wx)\include" />
+			<Add directory="$(#wx)\contrib\include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)\include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="/INCREMENTAL:NO" />
+			<Add option="/SUBSYSTEM:WINDOWS" />
+			<Add library="winmm.lib" />
+			<Add library="rpcrt4.lib" />
+			<Add library="kernel32.lib" />
+			<Add library="user32.lib" />
+			<Add library="gdi32.lib" />
+			<Add library="winspool.lib" />
+			<Add library="comdlg32.lib" />
+			<Add library="advapi32.lib" />
+			<Add library="shell32.lib" />
+			<Add library="ole32.lib" />
+			<Add library="oleaut32.lib" />
+			<Add library="uuid.lib" />
+			<Add library="comctl32.lib" />
+			<Add library="wsock32.lib" />
+			<Add library="odbc32.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28_net.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28_odbc.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28_xml.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxexpat.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxjpeg.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_adv.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_aui.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_core.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_dbgrid.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_gl.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_html.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_media.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_qa.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_richtext.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28_xrc.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxpng.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxregex.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxtiff.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxzlib.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_net.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_odbc.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28d_xml.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28ud.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28ud_net.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxbase28ud_xml.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxexpatd.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxjpegd.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_adv.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_aui.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_core.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_dbgrid.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_gl.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_html.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_media.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_qa.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_richtext.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28d_xrc.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_adv.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_aui.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_core.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_html.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_qa.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_richtext.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxmsw28ud_xrc.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxpngd.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxregexd.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxregexud.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxtiffd.lib" />
+			<Add library="..\..\SDK\wxWidgets-2.8.7\lib\vc_lib\wxzlibd.lib" />
+			<Add library="..\..\SDK\tetgen\tetgen1.4.3\Release\tetgen.lib" />
+			<Add library="..\..\SDK\MWT_v5\lib\release\DrT.lib" />
+			<Add library="..\..\SDK\armadillo-1.0.4\examples\lib_win32\blas_win32_MT.lib" />
+			<Add library="..\..\SDK\armadillo-1.0.4\examples\lib_win32\lapack_win32_MT.lib" />
+			<Add directory="..\..\SDK\boost_1_51_0\boost_1_51_0" />
+			<Add directory="..\..\SDK\MWT_v5\inc" />
+			<Add directory="..\..\SDK\tetgen\tetgen1.4.3\inc" />
+			<Add directory="..\..\SDK\fflas-ffpack-1.3.3\include" />
+			<Add directory="..\..\SDK\armadillo-1.0.4\include" />
+		</Linker>
+		<Unit filename="HyperGraph.cpp" />
+		<Unit filename="HyperGraph.h" />
+		<Unit filename="SketchGLCanvas.cpp" />
+		<Unit filename="SketchGLCanvas.h" />
+		<Unit filename="SketchSurfaceMakerApp.cpp" />
+		<Unit filename="SketchSurfaceMakerApp.h" />
+		<Unit filename="SketchSurfaceMakerMain.cpp" />
+		<Unit filename="SketchSurfaceMakerMain.h" />
+		<Unit filename="amlVec.h" />
+		<Unit filename="colormap.cpp" />
+		<Unit filename="colormap.h" />
+		<Unit filename="cycleUtils.cpp" />
+		<Unit filename="cycleUtils.h" />
+		<Unit filename="fileIOHelper.cpp" />
+		<Unit filename="fileIOHelper.h" />
+		<Unit filename="graphAlgorithm.cpp" />
+		<Unit filename="graphAlgorithm.h" />
+		<Unit filename="meshUtils.cpp" />
+		<Unit filename="meshUtils.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="wx_pch.h" />
+		<Unit filename="wxsmith\SketchSurfaceMakerframe.wxs" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="SketchSurfaceMakerApp.cpp" main="SketchSurfaceMakerFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/SketchSurfaceMakerframe.wxs" src="SketchSurfaceMakerMain.cpp" hdr="SketchSurfaceMakerMain.h" name="SketchSurfaceMakerFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/HyperGraph.wxs" src="HyperGraph.cpp" hdr="HyperGraph.h" name="HyperGraph" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

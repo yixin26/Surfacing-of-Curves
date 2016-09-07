@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="colormap.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="cycleUtils.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="fileIOHelper.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="glFontSystem.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="graphSearch.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="HyperGraph.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SketchGLCanvas.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SketchSurfaceMakerApp.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SketchSurfaceMakerMain.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CycleDiscovery.cpp">
+      <Filter>Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="amlVec.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="colormap.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="cycleUtils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="fileIOHelper.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="glFontSystem.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="graphSearch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="HyperGraph.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SketchGLCanvas.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SketchSurfaceMakerApp.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="SketchSurfaceMakerMain.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphStructure.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CycleDiscovery.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{832a5d5d-dfe7-49b0-8a64-bd69ec017c5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{cfd749b4-8ef1-40dc-9e89-5b31baf5c942}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
