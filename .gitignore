@@ -217,4 +217,5 @@ pip-log.txt
 .mr.developer.cfg
 
 *.exe
-
+.exe
+SketchSurfaceMaker.exe
